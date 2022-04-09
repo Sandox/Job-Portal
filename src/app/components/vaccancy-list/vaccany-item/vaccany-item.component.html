@@ -1,0 +1,20 @@
+<div  class="cols-xs-12">
+  <a style="cursor: pointer"
+     [routerLink]="[index]"
+     routerLinkActive="active"
+     class="list-group-item clearfix">
+    <div class="pull-left">
+      <h6 class="list-group-item-heading"> Job ID: {{ vacancy.jobId }}  </h6>
+      <h3 class="list-group-item-heading"> {{ vacancy.name }}  </h3>
+      <span class="pull-right">
+        <img [src]="vacancy.image"
+             alt=""
+             class="img-responsive"
+             style="max-height: 100px; ">
+      </span><hr/>
+    </div>
+   <strong><p class="list-group-item-text"> {{ vacancy.description }} </p></strong>
+    <p class="list-group-item-text"> {{ vacancy.startingDate }} </p>
+    <p class="list-group-item-text"> {{ vacancy.location }} </p>
+  </a>
+</div>

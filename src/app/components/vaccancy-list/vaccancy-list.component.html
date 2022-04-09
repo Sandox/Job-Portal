@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+
+        <app-vaccany-item
+          *ngFor="let rec of vacancies; let x = index;"
+          [vacancy]="rec"
+          [index]="x">
+        </app-vaccany-item>
+
+
+      <!---->
+      <!--<div *ngFor="let vacancy of jobVacancies" class="cols-xs-12">-->
+        <!--<a href="#" class="list-group-item clearfix">-->
+          <!--<div class="pull-left">-->
+            <!--<h2 class="list-group-item-heading"> {{ vacancy.name }} </h2>-->
+            <!--<br/>-->
+            <!--<span class="pull-right">-->
+            <!--<img [src]="vacancy.image"-->
+                 <!--alt=""-->
+                 <!--class="img-responsive" style="max-height: 250px; ">-->
+            <!--</span>-->
+            <!--<hr/>-->
+            <!--<h6 class="list-group-item-text"> Job ID: {{ vacancy.jobId }}  </h6>-->
+            <!--<h6 class="list-group-item-text"> {{ vacancy.description }} </h6>-->
+            <!--<h6 class="list-group-item-text"> {{ vacancy.startingDate }} </h6>-->
+            <!--<h6 class="list-group-item-text"> {{ vacancy.location }} </h6>-->
+          <!--</div>-->
+          <!--<h5 class="list-group-item-text"> Salary Range: <strong>{{ vacancy.salaryRange }}</strong></h5>-->
+        <!--</a>-->
+      <!--</div>-->
+    </div>
+
+    <div class="col-md-7">
+      <router-outlet></router-outlet>
+      <!-- <app-vaccany-item></app-vaccany-item> -->
+    </div>
+  </div>
+</div>
+
+
